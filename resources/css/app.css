@@ -7,3 +7,35 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Classes reutilizáveis para não repetir Tailwind em cada input/botão. */
+@utility input {
+    margin-top: 0.25rem;
+    width: 100%;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 0.75rem;
+}
+
+@utility btn {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+@utility btn-blue {
+    background-color: #2563eb;
+}
+
+@utility btn-green {
+    background-color: #16a34a;
+}
+
+@utility btn-gray {
+    background-color: #d1d5db;
+    color: #111827;
+}
+
+@utility erro {
+    font-size: 0.875rem;
+    color: #dc2626;
+}

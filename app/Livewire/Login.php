@@ -21,10 +21,6 @@ class Login extends Component
         $credenciais = $this->validate([
             'email' => 'required|email',
             'password' => 'required',
-        ], [
-            'email.required' => 'Informe o e-mail.',
-            'email.email' => 'Informe um e-mail válido.',
-            'password.required' => 'Informe a senha.',
         ]);
 
         // 2. Tenta autenticar. Auth::attempt confere o e-mail e a senha no banco.

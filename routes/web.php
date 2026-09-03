@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\AlunoForm;
 use App\Livewire\Alunos;
 use App\Livewire\Login;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,9 @@ Route::middleware('auth')->group(function () {
 
     // Um componente Livewire pode virar uma página inteira.
     Route::get('/alunos', Alunos::class)->name('alunos');
+
+    Route::get('/alunos/novo', AlunoForm::class)->name('alunos.novo');
+    Route::get('/alunos/{aluno}/editar', AlunoForm::class)->name('alunos.editar');
 
     Route::post('/logout', function () {
         Auth::logout();
